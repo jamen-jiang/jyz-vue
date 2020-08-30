@@ -1,0 +1,195 @@
+@import '@/styles/variables.scss';
+
+html,
+body,
+#app {
+  /*设置内部填充为0，几个布局元素之间没有间距*/
+  padding: 0px;
+  /*外部间距也是如此设置*/
+  margin: 0px;
+  /*统一设置高度为100%*/
+  height: 100%;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  padding: 0px;
+  margin: 0px;
+}
+.jyz-layout {
+  height: 100%;
+  overflow: hidden;
+  .el-table {
+    font-size: 12px;
+  }
+  .el-dialog {
+    .el-dialog__header {
+      border-bottom: 1px solid #ebeef5;
+      padding: 15px;
+    }
+    .el-dialog__body {
+      padding: 20px;
+    }
+    .el-dialog__footer {
+      border-top: 1px solid #ebeef5;
+      padding: 15px;
+    }
+  }
+  .el-table td,
+  .el-table th {
+    padding: 6px 0px;
+  }
+  .jyz-header {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    .el-menu {
+      background-color: transparent;
+      border-bottom: 0px;
+    }
+    .el-menu-item.is-active {
+      border-bottom: none;
+    }
+    .logo-group {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        margin-left: 10px;
+        color: #606266;
+      }
+    }
+    .toggle-btn {
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .toggle-btn i {
+      font-size: 23px;
+      color: #606266;
+    }
+    .toggle-btn:hover i {
+      color: #409eff !important;
+    }
+    .jyz-header-right {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .el-dropdown {
+        height: 100%;
+        display: flex;
+        .jyz-header-right-user {
+          display: flex;
+          align-items: center;
+          padding: 0px 5px;
+          cursor: pointer;
+          .el-avatar {
+            background-color: #fff;
+          }
+          p {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+  .jyz-middle {
+    overflow: hidden;
+    .el-menu {
+      background-color: transparent;
+      border-right: 0px;
+    }
+    .jyz-middle-main {
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      .jyz-middle-main-header {
+        height: 41px;
+        .el-tabs__header.is-top {
+          margin: 0px;
+        }
+        .el-tabs__nav {
+          overflow: hidden;
+        }
+      }
+      .jyz-middle-main-content {
+        border: 1px solid #cfd7e5;
+        border-top: 0px;
+        flex: 1;
+        overflow: hidden;
+        .jyz-container {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          overflow: hidden;
+          .jyz-container-header {
+            padding: 5px;
+            border-bottom: 1px solid #cfd7e5;
+            .query {
+              display: flex;
+              flex-wrap: wrap;
+              .el-form-item {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                .el-input {
+                  width: 130px;
+                }
+                .el-form-item__label {
+                  text-align: left;
+                  line-height: normal;
+                }
+                .el-date-editor.el-input,
+                .el-date-editor.el-input__inner {
+                  width: 130px;
+                }
+              }
+            }
+          }
+          .jyz-container-main {
+            flex: 1;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            .jyz-container-main-aside {
+              height: 100%;
+              padding: 10px;
+              overflow: hidden;
+              border-right: 1px solid #cfd7e5;
+            }
+            .jyz-container-main-body {
+              flex: 1;
+              padding: 0px;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              .jyz-container-main-body-footer {
+                padding: 10px;
+                border-top: 1px solid #cfd7e5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
